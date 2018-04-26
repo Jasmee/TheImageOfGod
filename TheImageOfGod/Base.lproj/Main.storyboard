@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G9o-BZ-NPt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,95 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TheImageOfGod" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I05-G7-ZdP">
+                                <rect key="frame" x="27" y="164" width="320" height="320"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="god" translatesAutoresizingMaskIntoConstraints="NO" id="PYJ-wf-xyP">
+                                        <rect key="frame" x="8" y="-13" width="304" height="304"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdb-NR-Gu5">
+                                        <rect key="frame" x="8" y="-13" width="304" height="304"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="5VS-sQ-n1d"/>
+                                    <constraint firstItem="PYJ-wf-xyP" firstAttribute="top" secondItem="I05-G7-ZdP" secondAttribute="topMargin" constant="-21" id="RdJ-U8-QVV"/>
+                                    <constraint firstItem="vdb-NR-Gu5" firstAttribute="top" secondItem="I05-G7-ZdP" secondAttribute="topMargin" constant="-21" id="XwJ-Th-wq8"/>
+                                    <constraint firstItem="PYJ-wf-xyP" firstAttribute="leading" secondItem="I05-G7-ZdP" secondAttribute="leadingMargin" id="YRC-HD-3Yg"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="PYJ-wf-xyP" secondAttribute="bottom" constant="21" id="dak-Tf-Qav"/>
+                                    <constraint firstAttribute="height" constant="320" id="h8S-hF-0rr"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="vdb-NR-Gu5" secondAttribute="trailing" id="iZ3-aQ-vRt"/>
+                                    <constraint firstItem="vdb-NR-Gu5" firstAttribute="leading" secondItem="I05-G7-ZdP" secondAttribute="leadingMargin" id="mKi-ed-GYL"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="vdb-NR-Gu5" secondAttribute="bottom" constant="21" id="qAY-ZJ-2CZ"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="PYJ-wf-xyP" secondAttribute="trailing" id="zaE-Pe-bTC"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pvc-0M-69N">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="sxB-gW-nwg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I05-G7-ZdP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="0wy-xy-rIN"/>
+                            <constraint firstItem="Pvc-0M-69N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="3pY-6O-XLX"/>
+                            <constraint firstItem="Pvc-0M-69N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6P6-IK-Ins"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pvc-0M-69N" secondAttribute="trailing" id="eeT-hQ-lmN"/>
+                            <constraint firstItem="I05-G7-ZdP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wYC-hV-HD2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sJM-nE-aMB">
+                        <barButtonItem key="leftBarButtonItem" title="Photos" id="Ux4-tH-V2B">
+                            <connections>
+                                <action selector="openPhotoLibrary:" destination="BYZ-38-t0r" id="4BJ-IS-lbU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="kTB-qG-abj">
+                            <connections>
+                                <action selector="savePhotoInAlbum:" destination="BYZ-38-t0r" id="3Vu-Pk-jja"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="I05-G7-ZdP" id="Z9B-yc-8lB"/>
+                        <outlet property="filteredImageView" destination="vdb-NR-Gu5" id="crD-iY-RZl"/>
+                        <outlet property="originalImageView" destination="PYJ-wf-xyP" id="vcR-P8-Yix"/>
+                        <outlet property="scrollView" destination="Pvc-0M-69N" id="vRw-ht-0el"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="6" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="beR-9b-ucf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G9o-BZ-NPt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lLW-E1-9pH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wqn-x1-Vsh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2P-o7-zzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-839" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="god" width="400" height="400"/>
+    </resources>
 </document>
